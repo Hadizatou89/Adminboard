@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>AdminBoard</title>
+    
+
+</head>
+<body>
+<!--Navbar-->
+<header>
+  <div class="container-fluid bg-dark">
+      <div class="container ">
+          <div class="row">
+              <nav class="navbar navbar-expand-lg navbar-dark">
+                  <a class="navbar-brand" href="#">Adminboard</a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <ul class="navbar-nav">
+                            <li>
+                              <a class="nav-item nav-link active" href="#">Dashboard <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li>
+                              <a class="nav-item nav-link" href="posts.html">Posts</a>
+                            </li>
+                            <li>
+                              <a class="nav-item nav-link" href="categorie.html">Categories</a>
+                            </li>
+                            <li>
+                              <a class="nav-item nav-link " href="utilisateur.html">Utilisateurs</a>
+                            </li>
+                            <li class="nav-item dropdown" style="margin-left: 200px;">
+                              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bienvenue Hadizatou</a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                  <a class="dropdown-item" href="profil.html"><i class="fas fa-user-circle"></i>Profil</a>
+                                  <a class="dropdown-item" href="parametre.html"><i class="fas fa-cog fa-fw " ></i>Parametre</a>
+                                </div>
+                            </li>
+                            <li>
+                              <a class="nav-item nav-link " href="log.html"> <i class="fas fa-user-times"></i>Logout</a>
+                            </li>
+                        </ul> 
+                  </div>
+              </nav>
+              
+          </div>
+      </div>
+  </div>
+</header>
+
+<!--haut-->
+<div class="container-fluid bg-primary text-light p-3">
+    <div class="container">
+        <div class="row">
+         <i class="fas fa-pencil-alt fa-2x"></i><h1>Posts</h1>
+        </div>
+    </div>
+</div>
+
+<!--Ajouts--> 
+<div class="container-fluid pb-3 bg-light text-white ">
+  <div class="container my-auto ">
+
+      <div class="row">
+        <div class="col-md-6">
+
+        </div>
+        <div class="col-md-6 mr-auto">
+<!--search--> 
+            <div class="input-group mt-3">
+              <input type="text" class="form-control" placeholder="Recherche" 
+              aria-label="search" aria-describedby="recherche">
+              <div class="input-group-append">
+                <button class="btn btn-outline-primary bg-primary text-white" type="button" id="recherche">
+                  Search
+                </button>
+              </div>
+            </div>
+          </div>
+      </div>  
+    
+    </div>
+      </div> 
+<!--corps--> 
+<div class="contener-fluid">
+<div class="container mt-3 mb-3">
+   <!--gauche--> 
+   <div class="row">
+    <div class="col">
+      <table class="table  table-striped text ">
+        <thead class="bg-light">
+          <td>Les posts recents</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </thead>
+        <thead class="bg-dark text-white">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Titre</th>
+            <th scope="col">Categorie</th>
+            <th scope="col">Date du post</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Post one</td>
+            <td>Web Development</td>
+            <td>April 10, 2020 </td>
+            <td ><button type="button" class="btn bg-secondary text-white" placeholder=""> <i class="fas fa-angle-double-right"></i> Details </button></td>
+          </tr>
+
+          <tr>
+            <th scope="row">2</th>
+            <td>Post Two</td>
+            <td></td>
+            <td>April 10, 2020</td>
+            <td><button type="button" class="btn bg-secondary text-white" placeholder=""> <i class="fas fa-angle-double-right"></i> Details </button></td>
+          </tr>
+
+          <tr>
+            <th scope="row">3</th>
+            <td>Post Three</td>
+            <td>Web Development</td>
+            <td>April 10, 2020</td>
+            <td><button type="button" class="btn bg-secondary text-white" placeholder=""> <i class="fas fa-angle-double-right"></i> Details </button></td>
+          </tr>
+
+          <tr>
+            <th scope="row">4</th>
+            <td>Post Four</td>
+            <td></td>
+            <td>April 10, 2020</td>
+            <td><button type="button" class="btn bg-secondary text-white" placeholder=""> <i class="fas fa-angle-double-right"></i> Details </button></td>
+          </tr>
+
+          <tr>
+            <th scope="row">5</th>
+            <td>Post Five</td>
+            <td>Web Development</td>
+            <td>April 10, 2020</td>
+            <td><button type="button" class="btn mt-3 bg-secondary text-white" placeholder=""> <i class="fas fa-angle-double-right"></i> Details </button></td>
+          </tr>
+        </tbody>
+
+        <tr class="bg-white">
+          <th scope="row" >6</th>
+          <td>Post Six</td>
+          <td></td>
+          <td>April 10, 2020</td>
+          <td><button type="button" class="btn mt-3 bg-secondary text-white" placeholder=""> <i class="fas fa-angle-double-right"></i> Details </button></td>
+        </tr>
+
+        <tr>
+          <th scope="row">
+            <nav class="aria-label">
+              <ul class="pagination">
+                <li class="page-item"><a href="#" class="page-link" tabindex="-1" aria-disabled="false">
+                  Previous
+                    </a>
+                </li>
+                <li class="page-item active ">
+                  <a href="#" class="page-link">1 <span class="sr-only">(current/span></a>
+                </li>
+
+                <li class="page-item ">
+                  <a href="#" class="page-link">2</a>
+                </li>
+                <li class="page-item ">
+                  <a href="#" class="page-link">3</a>
+                </li>
+
+                <li class="page-item">
+                  <a href="#" class="page-link">Next</a>
+                </li>
+              </ul>
+            </nav>
+          </th>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    </div>
+ 
+  
+    </div>
+
+</div>
+
+
+<!--Footer-->
+
+<div class="container-fluid  bg-dark text-center text-white p-4">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h5>Copyright &copy; 2020 adminBoard</h5> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!--JavaScript-->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        
+        <script src="bootstrap.js"></script>
+        <script src="bootstrap.bundle.js"></script>
+        <script src="Jquery.js"></script>
+</body>
+</html>

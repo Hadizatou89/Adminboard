@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Adminboard</title>
+</head>
+<body>
+<!--Navbar-->
+    <header>
+        <div class="container-fluid bg-dark">
+            <div class="container ">
+                <div class="row">
+                    <nav class="navbar navbar-expand-lg navbar-dark">
+                        <a class="navbar-brand" href="#">Adminboard</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                              <ul class="navbar-nav">
+                                  <li>
+                                    <a class="nav-item nav-link active" href="#">Dashboard <span class="sr-only">(current)</span></a>
+                                  </li>
+                                  <li>
+                                    <a class="nav-item nav-link" href="posts.html">Posts</a>
+                                  </li>
+                                  <li>
+                                    <a class="nav-item nav-link" href="categorie.html">Categories</a>
+                                  </li>
+                                  <li>
+                                    <a class="nav-item nav-link " href="utilisateur.html">Utilisateurs</a>
+                                  </li>
+                                  <li class="nav-item dropdown" style="margin-left: 200px;">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Bienvenue Hadizatou</a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <a class="dropdown-item" href="profil.html"><i class="fas fa-user-circle"></i>Profil</a>
+                                        <a class="dropdown-item" href="parametre.html"><i class="fas fa-cog fa-fw " ></i>Parametre</a>
+                                      </div>
+                                  </li>
+                                  <li>
+                                    <a class="nav-item nav-link " href="log.html"> <i class="fas fa-user-times"></i>Logout</a>
+                                  </li>
+                              </ul> 
+                        </div>
+                    </nav>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+<!--haut-->
+    <div class="container-fluid bg-primary text-light p-3">
+        <div class="container">
+            <div class="row">
+                <i class="fas fa-cog fa-fw fa-2x" ></i> <h3>Dashboard</h3> 
+               
+            </div>
+        </div>
+    </div>
+<!--Ajouts-->
+
+ <div class="container-fluid pb-3 bg-light text-white ">
+  <div class="container my-auto ">
+
+      <div class="row">
+        <div class="col-md-9">
+          <form>
+            <div class="form-row">
+    <!--Post--> 
+              <div class="col-md-4">
+                    <button type="button" class="form-control mt-3 bg-primary text-white text-center"
+                     data-target="#post" data-toggle="modal"> <i class="fas fa-plus"></i> Ajouter un post </button>
+                
+             <!--Post Modal--> 
+                      <div class="modal fade text-dark" id="post" tabindex="-1" role="dialog" aria-labelledby="ajouterunpost" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header bg-primary">
+                              <h5 class="modal-title text-white" id="ajouterpost">Ajouter un post</h5>
+                              <button type="button" class="close text-white" data-dismiss="modal" aria-label="close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <form class="text-dark">
+                                <div class="mb-3">
+                                    <label for="titre">Titre</label>
+                                    <input type="text" name="titre" class="form-control">
+                                </div>
+                                
+
+                              <label for="categorie">Category</label>
+                                <div class="input-group"> 
+                                
+                                  <select name="categorie" id="" class="cutom-select form-control">
+                                    <option selected>Web Developper</option>
+                                    <option value="1">Tech Gadgets</option>
+                                    <option value="2">Business</option>
+                                    <option value="3">Health and wellness</option>
+                                  </select>
+                                </div>
+                                    <div class="mb-3 mt-3">
+                                      <label for="imageupload">Image-Upload</label> <br>
+                                      <input type="file" name="imageupload" class=" btnoutline-none">
+                                        <p >max size 3mb</p>
+                                    </div>
+                                <div>
+                                  <label for="body">body</label>
+                                  
+                                  <head>
+                                    <meta charset="utf-8">
+                                    <title>CKEditor</title>
+                                    <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+                            </head>
+                            <body>
+                                    <textarea name="editor1"></textarea>
+                                    <script>
+                                            CKEDITOR.replace( 'editor1' );
+                                    </script>
+                            </body>
+                                </div>
+                                
+                                
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button class="btn btn-secondary">Close</button>
+                              <button class="btn btn-primary">Save changes</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+              </div>
+
+    <!--Categorie--> 
+              <div class="col-md-4">
+                    <button type="button" class="form-control mt-3 bg-success text-white text-center" 
+                    data-target="#categories" data-toggle="modal"> <i class="fas fa-plus"></i> Ajouter une categorie </button>
+              
+            <!--Categorie Modal--> 
+                      <div class="modal fade text-dark" id="categories" tabindex="-1" role="dialog" aria-labelledby="ajouterunpost" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+
+                          <div class="modal-content">
+                            <div class="modal-header bg-success">
+                                  <h5 class="modal-title text-white" id="ajouterunpost">Ajouter un post</h5>
+                                  <button type="button" class="close text-white" data-dismiss="modal" aria-label="close">
+                                      <span aria-hidden="true">&times;</span>
+                                  </button>
+                            </div>
+
+                            <div class="modal-body">
+                              <form class="text-dark">
+                                <div class="mb-3">
+                                    <label for="titre">Titre</label>
+                                    <input type="text" name="titre" class="form-control">
+                                </div>
+                              </form>
+                            </div>
+
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary">Close</button>
+                                <button class="btn btn-success">Save changes</button>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+            </div>
+              
+
+     <!--utilisateur--> 
+              <div class="col-md-4">
+                    <button type="button" class="form-control mt-3 bg-warning text-dark text-center" 
+                    data-target="#utilisateur" data-toggle="modal"> <i class="fas fa-plus"></i> Ajouter un utilisateur </button>
+              
+            <!--utilisateur Modal--> 
+                    <div class="modal fade text-dark" id="utilisateur" tabindex="-1" role="dialog" aria-labelledby="ajouterunpost" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+
+                        <div class="modal-content">
+                          <div class="modal-header bg-warning">
+                            <h5 class="modal-title text-white" id="ajouterpost">Ajouter un post</h5>
+                            <button type="button" class="close text-white" data-dismiss="modal" aria-label="close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+
+                            <form class="text-dark">
+                              <div class="mb-3">
+                                  <label for="titre">Name</label>
+                                  <input type="text" name="titre" class="form-control">
+                              </div>
+
+                              <div class="mb-3">
+                                <label for="titre">Email</label>
+                                <input type="email" name="titre" class="form-control">
+                            </div>
+
+                            <div class="mb-3">
+                              <label for="titre">Password</label>
+                              <input type="password" name="titre" class="form-control">
+                          </div>
+                        
+                          <div class="mb-3">
+                            <label for="titre">Titre</label>
+                            <input type="text" name="titre" class="form-control">
+                        </div>
+                            </form>
+                          </div>
+                          <div class="modal-footer">
+                            <button class="btn btn-secondary">Close</button>
+                            <button class="btn btn-warning">Save changes</button>
+                          </div>
+                        
+
+                        </div>
+                      </div>
+                    </div>
+            </div>
+              </div>
+          </form>
+      </div>  
+    
+        </div>
+      </div> 
+  </div>
+  
+<!--corps-->
+   <div class="contener-fluid">
+  <div class="container mt-3 mb-3">
+     <!--gauche--> 
+     <div class="row">
+      <div class="col-md-9">
+        <div class="card">
+       <div class="card-header">
+         Les postes recents
+       </div>
+  <table class="table  table-striped text ">
+         
+          <thead class="bg-dark text-white">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Titre</th>
+              <th scope="col">Categorie</th>
+              <th scope="col">Date du post</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Post one</td>
+              <td>Web Development</td>
+              <td>April 10, 2020 </td>
+              <td ><a href="post1.html" type="button" class="btn bg-secondary text-white" placeholder=""> <i class="fas fa-angle-double-right"></i> Details </a></td>
+            </tr>
+  
+            <tr>
+              <th scope="row">2</th>
+              <td>Post Two</td>
+              <td>Tech Gadgets</td>
+              <td>April 10, 2020</td>
+              <td><a href="postOne.html" type="button" class="btn bg-secondary text-white" placeholder=""> <i class="fas fa-angle-double-right"></i> Details </a></td>
+            </tr>
+  
+            <tr>
+              <th scope="row">3</th>
+              <td>Post Three</td>
+              <td>Web Development</td>
+              <td>April 10, 2020</td>
+              <td><a href="postOne.html" type="button" class="btn bg-secondary text-white" placeholder=""> <i class="fas fa-angle-double-right"></i> Details </a></td>
+            </tr>
+  
+            <tr>
+              <th scope="row">4</th>
+              <td>Post Four</td>
+              <td>Business</td>
+              <td>April 10, 2020</td>
+              <td><a href="postOne.html" type="button" class="btn bg-secondary text-white" placeholder=""> <i class="fas fa-angle-double-right"></i> Details </a></td>
+            </tr>
+  
+            <tr>
+              <th scope="row">5</th>
+              <td>Post Five</td>
+              <td>Web Development</td>
+              <td>April 10, 2020</td>
+              <td><a href="postOne.html" type="button" class="btn mt-3 bg-secondary text-white" placeholder=""> <i class="fas fa-angle-double-right"></i> Details </a></td>
+            </tr>
+          </tbody>
+  
+          <tr>
+            <th scope="row">6</th>
+            <td>Post Six</td>
+            <td>Health and Welness</td>
+            <td>April 10, 2020</td>
+            <td><a href="postOne.html" type="button" class="btn mt-3 bg-secondary text-white" placeholder=""> <i class="fas fa-angle-double-right"></i> Details </a></td>
+          </tr>
+  
+        </table>
+     </div>
+        
+      </div>
+  
+    <!--droite--> 
+      <div class="col-md-3">
+      
+          <div class="row">
+            <div class="col-12 text-white text-center  mb-4">
+              
+                <div class=" card bg-primary" >
+                  <h4>Posts</h4>
+                 <i class="fas fa-pen fa-2x"> <span>6</span></i>
+                 <div>
+                  <button class="btn text-white border-white mt-2 mb-2" type="button">Voir plus</button>
+                 </div>
+                </div>
+              </div>
+            </div>
+          
+  
+          <div class="row mt-3">
+            <div class="col-12 text-white text-center pt-1 pb-4">
+              <div class="card bg-success ">
+                <h4>Posts</h4>
+               <i class="far fa-folder-open fa-2x">  <span>4</span></i>
+               <div>
+                <button class="btn text-white border-white mt-2 mb-2" type="button">Voir plus</button>
+               </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row mt-3">
+            <div class="col-12 text-white text-center pt-1 pb-3">
+                <div class="card bg-warning">
+                  <h4>Posts</h4>
+                 <i class="fa fa-users fa-2x"> <span>13</span></i>
+                 <div>
+                  <button class="btn text-white border-white mt-2 mb-2" type="button">Voir plus</button>
+                 </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+
+<div class="container-fluid  bg-dark text-center text-white p-4">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h5>Copyright &copy; 2020 adminBoard</h5> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+</body>
+</html>
